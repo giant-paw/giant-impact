@@ -1,0 +1,235 @@
+/* ROOT */
+:root {
+  --themeRed: #f3606c;
+  --gray: #efefef;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  min-height: 2000px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+/* Navbar */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  align-items: center;
+  padding: 1.4rem 7%;
+  background-color: rgba(1, 1, 1, 0.8);
+  border-bottom: 1px solid #513c28;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+}
+
+.navbar .navbar-logo {
+  font-size: 1.7rem;
+  font-weight: 700;
+  color: #fff;
+  font-style: italic;
+}
+
+.navbar .navbar-logo span {
+  color: var(--themeRed);
+}
+
+.navbar .navbar-nav a {
+  font-size: 1.2rem;
+  color: #fff;
+  display: inline-block;
+  margin: 0 0.5rem;
+}
+
+.navbar .navbar-nav a:hover {
+  color: #f3606c;
+}
+
+.navbar .navbar-nav a::after {
+  content: "";
+  display: block;
+  padding-bottom: 0.5rem;
+  border-bottom: 0.1rem solid var(--themeRed);
+  transform: scaleX(0);
+  transition: 0.2s linear;
+}
+
+.navbar .navbar-nav a:hover::after {
+  transform: scaleX(0.5);
+}
+
+/* hero */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(/src/hero.jpg);
+  background-repeat: none;
+  background-size: cover;
+  background-position: center;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 20%;
+  bottom: 0;
+  background: linear-gradient(
+    0deg,
+    rgba(1, 1, 3, 1) 9%,
+    rgba(255, 255, 255, 0) 48%
+  );
+}
+
+.hero .content {
+  padding: 1.4rem 7%;
+  max-width: 90rem;
+}
+
+.hero .content h1 {
+  font-size: 2.3rem;
+  color: #fff;
+  text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+  background-color: rgba(1, 1, 1, 0.39);
+  border-radius: 16px;
+  line-height: 4rem;
+  padding: 0.5rem;
+}
+
+.hero .content h1 span {
+  color: var(--themeRed);
+}
+
+/* About */
+
+.about-section .container .about-title {
+  width: 300px;
+  border-bottom: 3px solid var(--themeRed);
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 200;
+  margin: 0 auto 50px;
+  position: relative;
+}
+
+.about-title::after {
+  display: inline-block;
+  content: "";
+  height: 13px;
+  width: 13px;
+  background-color: var(--themeRed);
+  position: absolute;
+  left: calc(50% - 10px);
+  top: calc(72% - 7px);
+  transform: rotate(45deg) translate(50%, 50%);
+  border: 3px solid #fff;
+}
+
+.about-section {
+  padding: 100px 0;
+  position: relative;
+  margin: auto;
+  width: 1140px;
+}
+
+.about-section .cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 50px;
+  position: relative;
+  height: 245px;
+}
+
+.about-section .cards > div {
+  width: 350px;
+  background-color: var(--gray);
+  padding: 35px;
+  color: #444;
+  text-align: center;
+  border-radius: 15px;
+  height: 215px;
+  border: 1px solid #ccc;
+  transition: 0.4s;
+}
+
+.about-section .cards > div:hover {
+  width: 400px;
+  margin-top: -20px;
+  border-color: var(--themeRed);
+  padding: 55px;
+  height: auto;
+}
+
+.about-section .cards > div .title {
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.about-section .cards > div p {
+  font-size: 14px;
+  margin-top: 15px;
+}
+
+.about-section .cards > div button {
+  border: 1px solid var(--themeRed);
+  outline: none;
+  padding: 7px 15px;
+  margin-top: 15px;
+  font-size: 12px;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.about-section .cards > div:hover button {
+  background-color: var(--themeRed);
+  color: #fff;
+}
+
+/* Programs */
+
+.programs .container .programs-title {
+  width: 300px;
+  border-bottom: 3px solid var(--themeRed);
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 200;
+  margin: 0 auto 50px;
+  position: relative;
+}
+
+.programs-title::after {
+  display: inline-block;
+  content: "";
+  height: 13px;
+  width: 13px;
+  background-color: var(--themeRed);
+  position: absolute;
+  left: calc(50% - 10px);
+  top: calc(72% - 7px);
+  transform: rotate(45deg) translate(50%, 50%);
+  border: 3px solid #fff;
+}
+
+.programs {
+  background-color: #e2e2e2;
+}
